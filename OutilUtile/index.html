@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Outils JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="star-solid.svg" type="image/svg+xml">
+    
+</head>
+<body>
+	<header>
+		<h1>Outils JS</h1>
+	</header>
+	<nav>
+        <button onclick="formatValeurJS()">Formatage de valeurs</button>
+		<button onclick="compareTabV2Commun()">Commun</button>
+		<button onclick="compareTabV2Diff()">Différent</button>
+        <button onclick="updateEnMasse()">Update en masse</button>
+        <button onclick="deleteEnMasse()">Delete en masse</button>
+	</nav>
+	<div id="scripts-container">
+		<!-- les scripts s'afficheront ici -->
+	</div>
+    <button id="info-btn" class="info-btn">
+        <span class="info-btn-icon">?</span>
+      </button>
+  
+      <div id="info-bubble" class="info-bubble">
+        <ul>
+            <li>Cliquez sur un script pour recevoir des conseils d'utilisation</li>
+        </ul>
+      </div>
+      <script src="JS/infoBubble.js"></script>
+      <script src="JS/compareTabV2commun.js"></script>
+      <script src="JS/compareTabV2different.js"></script>
+      <script src="JS/formatValeurs.js"></script>
+      <script src="JS/generationUpdate.js"></script>
+      <script src="JS/generationDelete.js"></script>
+</body>
+</html>

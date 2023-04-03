@@ -1,0 +1,178 @@
+body {
+	background-color: #1c1c1e;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	padding: 20px;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+button {
+  background-color: #555;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 15px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #1c1c1e;
+}
+
+button#reset {
+  margin: auto;
+}
+
+#scripts-container {
+	padding: 20px;
+	/* display: flex;*/
+	flex-wrap: wrap;
+	justify-content: center; 
+  margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+}
+
+textarea, input {
+  background-color: #333;
+  color: #fff;
+}
+
+.tout{
+  /* justify-content: center; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	button {
+		margin: 5px;
+	}
+	#scripts-container {
+		padding: 10px;
+	}
+}
+
+/* CSS pour le titre */
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* CSS pour les tableaux */
+  /* #tableau1,
+  #tableau2 {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+  } */
+  
+  /* CSS pour les titres des tableaux */
+  h2, h3 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* CSS pour le bouton comparer */
+  #comparer {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* CSS pour le tableau résultat */
+  #resultat {
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* CSS pour le titre du tableau résultat */
+  #resultat h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* CSS formatage de valeurs */
+  label {
+    font-size: .8em;
+    color: #999;
+  }
+  #ctn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 535px;
+  }
+  .count {
+    float: right;
+    font-size: .8em;
+    color: #999;
+  }
+
+  /* CSS de la bulle d'Info */
+  .info-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .info-btn-icon {
+    /* display: inline-block;
+    margin-top: 50%;
+    transform: translateY(-50%); */
+    margin-left: -4px;
+  }
+
+  .info-bubble {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #fff;
+    color: #333;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+
+  .info-bubble ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-bubble li {
+    padding: 5px 0;
+  }
