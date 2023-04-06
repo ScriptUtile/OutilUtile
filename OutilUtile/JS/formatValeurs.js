@@ -49,10 +49,11 @@ function copyHdlr() {
 function formatValeurJS() {
   document.getElementById("info-bubble").innerHTML =`
 <ul>
-<li>Ce script permet de formater une colonne de valeur en une ligne de valeur comme suit : 'valeur1', 'valeur2', 'valeur3'</li>
+<li>Ce script permet de formater une colonne de valeurs en une ligne de valeurs comme suit : 'valeur1', 'valeur2', 'valeur3'</li>
 </ul>
 `;
     document.getElementById("scripts-container").innerHTML = `
+    <h2>Formatage de valeurs : colonne > ligne</span></h2>
     <div id="ctn">
     <div>
       <label for="inputValues">Entrez les valeurs :</label><br>

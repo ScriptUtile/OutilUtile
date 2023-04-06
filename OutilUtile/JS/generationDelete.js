@@ -30,19 +30,20 @@ function genererRequetesDelete() {
 </ul>
 `;
     document.getElementById("scripts-container").innerHTML = `
-    <h1>Création de requêtes SQL DELETE</h1>
-    <p for="nomTable">Table à mettre à jour :</p>
-	<input type="text" id="nomTable"><br><br>
+    <div id="ctn">
+        <h2>Création de requêtes SQL DELETE</h2>
+        <label for="nomTable">Table à mettre à jour :</label>
+        <input type="text" id="nomTable"><br><br>
 
-    <p>Colonnes du WHERE :</p>
-	<input type="text" id="colonneWhere"><br><br>
+        <label for="colonneWhere">Colonnes du WHERE :</label>
+        <input type="text" id="colonneWhere"><br><br>
 
-	<p>Clause WHERE :</p>
-	<textarea id="where" rows="10" cols="50"></textarea><br><br>
+        <label for="where">Clause WHERE :</label><br>
+        <textarea id="where" rows="10" cols="70"></textarea><br><br>
 
-	<button onclick="genererRequetesDelete()">Générer les requêtes</button><br><br>
+        <button onclick="genererRequetesDelete()">Générer les requêtes</button><br><br>
 
-	<textarea id="resultat" rows="10" cols="80"></textarea>
-
+        <textarea id="resultat" rows="10" cols="70"></textarea>
+    </div>
     `;
   }

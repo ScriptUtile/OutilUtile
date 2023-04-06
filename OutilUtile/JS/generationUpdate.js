@@ -76,25 +76,26 @@ function genererRequetesUpdate() {
     </ul>
     `;
     document.getElementById("scripts-container").innerHTML = `
-    <h1>Création de requêtes SQL UPDATE</h1>
-    <p for="nomTable">Table à mettre à jour :</p>
-	<input type="text" id="nomTable"><br><br>
+    <h2>Création de requêtes SQL UPDATE</h2>
+    <div id="ctn">
+        <label for="nomTable">Table à mettre à jour :</label><br>
+        <input type="text" id="nomTable"><br><br>
 
-	<p>Colonne à mettre à jour :</p>
-	<input type="text" id="colonnes"><br><br>
+        <label for="colonnes">Colonne à mettre à jour :</label><br>
+        <input type="text" id="colonnes"><br><br>
 
-	<p>Valeurs à mettre à jour :</p>
-	<textarea id="valeurs" rows="10" cols="50"></textarea>
+        <label for="valeurs">Valeurs à mettre à jour :</label><br>
+        <textarea id="valeurs" rows="10" cols="70"></textarea>
+        <br><br>
+        <label for="colonneWhere">Colonnes du WHERE :</label><br>
+        <input type="text" id="colonneWhere"><br><br>
 
-    <p>Colonnes du WHERE :</p>
-	<input type="text" id="colonneWhere"><br><br>
+        <label for="where">Clause WHERE :</label><br>
+        <textarea id="where" rows="10" cols="70"></textarea><br><br>
 
-	<p>Clause WHERE :</p>
-	<textarea id="where" rows="10" cols="50"></textarea><br><br>
+        <button onclick="genererRequetesUpdate()">Générer les requêtes</button><br><br>
 
-	<button onclick="genererRequetesUpdate()">Générer les requêtes</button><br><br>
-
-	<textarea id="resultat" rows="10" cols="80"></textarea>
-
+        <textarea id="resultat" rows="10" cols="70"></textarea>
+    </div>
     `;
   }

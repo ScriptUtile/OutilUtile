@@ -28,14 +28,16 @@ function comparerDiff() {
 </ul>
 `;
     document.getElementById("scripts-container").innerHTML = `
-    <h2>Comparaison de tableaux différents</h2>
-    <h3>Entrez les éléments des deux tableaux à comparer, un par ligne :</h3>
-    <div class="tout">
-        <textarea id="tableau1" rows="8" cols="20"></textarea>
-        <textarea id="tableau2" rows="8" cols="20"></textarea><br />
+    <h2>Comparaison de tableaux : éléments différents</h2>
+    <!--<div class="tout">-->
+    <div id="ctn">
+      <label for="tableau1">Entrez les éléments des deux tableaux à comparer, un par ligne :</label>
+      <textarea id="tableau1" rows="20" cols="25"></textarea>
+      <textarea id="tableau2" rows="20" cols="25"></textarea><br />
         <button onclick="comparerDiff()">Comparer</button><br />
-        Résultat :<br />
-        <textarea id="resultat" rows="8" cols="20"></textarea>
+        <br>
+        <label for="resultat">Résultat :</label><br>
+        <textarea id="resultat" rows="18" cols="54"></textarea>
     </div>
     `;
   }
