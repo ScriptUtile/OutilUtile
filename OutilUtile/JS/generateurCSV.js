@@ -11,8 +11,11 @@ function generateCSV() {
   // Création d'un élément lien pour télécharger le fichier CSV
   let encodedUri = encodeURI(csvContent);
   let link = document.createElement("a");
+  let fileName =  document.getElementById("fileName").value;
+  if((fileName.length - fileName.indexOf('.csv')) != 4 ) fileName += ".csv";
   link.setAttribute("href", encodedUri);
-  link.setAttribute("download", "data.csv");
+  // link.setAttribute("download", "data.csv");
+  link.setAttribute("download", fileName);
   document.body.appendChild(link);
   
   // Téléchargement du fichier CSV
@@ -35,6 +38,9 @@ function creationCSV() {
       <textarea id="columnNames" rows="4" cols="70"></textarea><br><br>
       <label for="values">Valeurs :</label><br>
       <textarea id="values" rows="20" cols="70"></textarea><br><br>
+      <label for="fileName">Nom du fichier :</label><br>
+      <input type="text" id="fileName" value="data.csv">
+      <br><br>
       <button onclick="generateCSV()">Générer le fichier CSV</button>
     </div>
     `;
