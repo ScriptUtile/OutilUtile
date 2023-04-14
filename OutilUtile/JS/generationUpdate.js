@@ -29,7 +29,7 @@ function genererRequetesUpdate() {
         }
     } else if (valeursTableau.length == 1) {
         for (var i = 0; i < where.length; i++) {
-            if (valeursTableau[0].length == 4) {
+            if (valeursTableau[0] == "null") {
                 console.log('RLY ??')
                 requetes.push("UPDATE " + nomTable + " SET " + colonnes + " = " + valeursTableau + " where " + colonneWhere + " = '" + where[i] + "';");
             } else {

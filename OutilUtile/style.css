@@ -148,6 +148,17 @@ h1 {
     color: #999;
   }
 
+  /* 2 colonnes pour 2 textarea */
+  #cols {
+    position: relative;
+    margin-top: 1rem;
+  }
+  #cols label {
+    position: absolute;
+    top: -1rem;
+    /* font-size: .7rem; */
+  }
+
   /* CSS de la bulle d'Info */
   .info-btn {
     position: fixed;
@@ -193,3 +204,37 @@ h1 {
   .info-bubble li {
     padding: 5px 0;
   }
+
+  table, th, td {
+    border: #555 solid 1px;
+    border-spacing: 0;
+  }
+  td {
+    padding: 5px;
+    text-align: right;
+    font-size: 0.9rem;
+  }
+  td.center {
+    text-align: center;
+  }
+
+  table.small th {
+    text-align: center;
+  }
+
+  table.small th, table.small td {
+    font-size: .8rem;
+  }
+
+  td.vtop {
+    vertical-align: top;
+  }
+
+  th.narrow {
+    width: 20%;
+  }
+  th.large {
+    width: 40%;
+  }
+
+

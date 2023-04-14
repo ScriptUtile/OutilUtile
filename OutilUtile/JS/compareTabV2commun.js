@@ -31,12 +31,12 @@ function comparerComm() {
     <!--<div class="tout">-->
     <div id="ctn">
     <label for="tableau1">Entrez les éléments des deux tableaux à comparer, un par ligne :</label>
-    <textarea id="tableau1" rows="20" cols="25"></textarea>
-    <textarea id="tableau2" rows="20" cols="25"></textarea><br />
+    <textarea id="tableau1" rows="20" cols="30"></textarea>
+    <textarea id="tableau2" rows="20" cols="30"></textarea><br />
     <div><button onclick="comparerComm()">Comparer</button></div>
     <br>
     <label for="resultat">Résultat :</label><br>
-    <textarea id="resultat" rows="18" cols="54"></textarea>
+    <textarea id="resultat" rows="18" cols="64"></textarea>
     </div>
     `;
   }
