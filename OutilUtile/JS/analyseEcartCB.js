@@ -94,6 +94,7 @@ function compareAmounts(dataBank, dataWaterp) {
       eltWaterp = dataWaterp[j];
       if(!eltWaterp.match && eltBank.montant == eltWaterp.montant && eltBank.id_fac_cli == eltWaterp.id_fac_cli) {
         eltBank.match = eltWaterp.match = true;
+        break;
       }
     }
   }
@@ -113,8 +114,8 @@ function getUnmatched(arrData) {
 
 
 function runAnalysis() {
-  var inputBank = document.getElementById('inputBank').value;
-  var inputWaterp = document.getElementById('inputWaterp').value;
+  var inputBank = document.getElementById('inputBank').value.trim();
+  var inputWaterp = document.getElementById('inputWaterp').value.trim();
 
   
   /// données bancaires
@@ -241,13 +242,6 @@ function runAnalysis() {
   outputHtml += "</table>";
   document.getElementById("output").innerHTML = outputHtml;
 }
-
-
-// todo
-/*
-- doublons
-*/
-// runAnalysis();
 
 
 
