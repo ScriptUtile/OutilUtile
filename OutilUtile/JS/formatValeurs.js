@@ -31,13 +31,8 @@ function formatValues() {
 }
 function copyHdlr() {
     var num = this.id.substr(5);
-    var el = document.getElementById('outputValues-'+num);;
+    var el = document.getElementById('outputValues-'+num);
     copyToClipboard(el);
-  }
-
-  function copyToClipboard(el) {
-    el.select();
-    document.execCommand("copy");
   }
 
   function checkCopyAuto() {

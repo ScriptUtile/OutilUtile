@@ -43,7 +43,7 @@ function extractDataWaterp(str){
     headers[i] = headers[i].trim();
   }
   
-  for(var i = 1; i < arr.length; i++) {
+  for(let i = 0; i < arr.length; i++) {
     var data = arr[i].split('\t');
     var rowWaterp = {};
     for(var j = 0; j < headers.length; j++) {
@@ -53,7 +53,6 @@ function extractDataWaterp(str){
     }
     dataWaterp.push(rowWaterp);
   }
-  
   return dataWaterp;
 }
 
@@ -129,7 +128,6 @@ function runAnalysis() {
   var sumBank = sumArrayOnPorperty(dataBank, 'montant', true);
   var sumWaterp = sumArrayOnPorperty(dataWaterp, 'montant', true);
   var delta = sumBank - sumWaterp;
-
 
   /// comparaison des données
   var res = compareAmounts(dataBank, dataWaterp);
@@ -252,6 +250,7 @@ function analyseEcartCB() {
   </ul>
   `;
       document.getElementById("scripts-container").innerHTML = `
+      <h2>Ecart CB</h2>
       <div id="ctn">
       <div>
         <label for="inputBank">Entrez les données bancaires (copier/coller du fichier xml) :</label><br>
@@ -259,10 +258,13 @@ function analyseEcartCB() {
       </div>
       <br>
       <div>
-        <label for="inputWaterp">Entrez les données Wat.erp (copier/coller des données SQLDeveloper) :<br>
-        select id_fac_cli, mnt_cdt_ttc_ecr_cli, num_cta_abt from ecr_cli where cod_typ_ecr='11' and cod_mod_reg='02' and trunc(dat_cpt_ecr_cli)='&dat' order by 1;</label><br>
+      <label for="inputWaterp">Entrez les données Wat.erp (copier/coller des données SQLDeveloper) :<br>
+<!--        <span class="sql" id="reqSql">select id_fac_cli, mnt_cdt_ttc_ecr_cli, num_cta_abt from ecr_cli where cod_typ_ecr='11' and cod_mod_reg='02' and trunc(dat_cpt_ecr_cli)='&dat' order by 1;</span></label>-->
+        </label>
+        <textarea rows="2" cols="83" readonly class="sql" id="reqSql" onclick="copyToClipboard(document.getElementById('reqSql'));">select id_fac_cli, mnt_cdt_ttc_ecr_cli, num_cta_abt from ecr_cli where cod_typ_ecr='11' and cod_mod_reg='02' and trunc(dat_cpt_ecr_cli)='&dat' order by 1;</textarea>
+        <br>
         <textarea id="inputWaterp" rows="10" cols="70"></textarea>
-      </div>
+        </div>
       <button type="button" onclick="runAnalysis()">Analyser</button>
       <button type="button" id="reset" onclick="analyseEcartCB()">Reset</button><br><br>
   
