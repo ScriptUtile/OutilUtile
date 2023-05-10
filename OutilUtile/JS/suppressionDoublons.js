@@ -3,28 +3,44 @@ function runSupprDoublons() {
   var lines = input.split("\n");
   
   // supprime les doublons
-  var uniqueArr = removeDuplicates(lines);
+  var resDuplicates = removeDuplicatesPlus(lines);
+  var uniqueArr = resDuplicates[0];
+  var doublonsArr = resDuplicates[1];
 
   var output = "";
-   output += "<label for='outputValues'>Résultat</label><br>";
-  output += "<textarea id='outputValues' rows='5' cols='70' readonly>";
+  // résultat sans doublons
+  output += "<label for='outputValues'>Résultat sans les doublons :</label><br>";
+  output += "<textarea id='outputValues' rows='15' cols='70' readonly>";
   for (let i = 0; i < uniqueArr.length; i++) {
     output += uniqueArr[i] + "\n";
   }
   output += "</textarea>";
   output += "<div id='count' class='count'>"+uniqueArr.length+"</div>";
 
+
+  // doublons supprimés
+  output += "<br><label for='doublonsValues'>Doublons supprimés :</label><br>";
+  output += "<textarea id='doublonsValues' rows='5' cols='70' readonly>";
+  for (let i = 0; i < doublonsArr.length; i++) {
+    output += doublonsArr[i] + "\n";
+  }
+  output += "</textarea>";
+  output += "<div id='doublonsCount' class='count'>"+doublonsArr.length+"</div>";
+
+
   document.getElementById("countIn").innerHTML = lines.length;
   document.getElementById("output").innerHTML = output;
 
   console.log('lines', lines);
   console.log('uniqueArr', uniqueArr);
+  console.log('doublonsArr', doublonsArr);
 }
 
 function supprDoublons() {
     document.getElementById("info-bubble").innerHTML =`
   <ul>
-  <li>A venir</li>
+  <li>Ce script retourne la liste de valeurs entrées allégée de ses doublons.</li>
+  <li>Une valeur par ligne</li>
   </ul>
   `;
   document.getElementById("scripts-container").innerHTML = `

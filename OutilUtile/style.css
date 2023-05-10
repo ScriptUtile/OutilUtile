@@ -42,13 +42,13 @@ button#reset {
 }
 
 #scripts-container {
-	padding: 20px;
+	/* padding: 20px; */
 	/* display: flex;*/
 	flex-wrap: wrap;
 	justify-content: center; 
   margin-left: auto;
-        margin-right: auto;
-        width: 80%;
+  margin-right: auto;
+  /* width: 80%; */
 }
 
 textarea, input {
@@ -131,6 +131,12 @@ h1 {
     margin-bottom: 1rem;
   }
 
+  .fullwidth {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   /* CSS formatage de valeurs */
   label {
     font-size: .8em;
@@ -146,12 +152,23 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 535px;
+    /* width: fit-content; */
     text-align: center;
   }
   .count {
     float: right;
     font-size: .8em;
     color: #999;
+  }
+
+  .left-align {
+    text-align: left;
+  }
+  .right-align {
+    text-align: right;
+  }
+  .float-left {
+    float: left;
   }
 
   /* 2 colonnes pour 2 textarea */
@@ -211,6 +228,7 @@ h1 {
     padding: 5px 0;
   }
 
+  
   /* table */
   table, th, td {
     border: #555 solid 1px;
@@ -224,6 +242,8 @@ h1 {
   td.center {
     text-align: center;
   }
+
+  tr:nth-child(odd) {background: #333; }
 
   table.small th {
     text-align: center;
@@ -244,4 +264,19 @@ h1 {
     width: 40%;
   }
 
+  td.diff {
+    color: red;
+  }
+
+  .num {
+    color: #aaa;
+    font-size: smaller;
+    font-weight: normal;
+  }
+
+  .shrink {
+    overflow-wrap: anywhere;
+    min-width: 30px;
+    vertical-align: baseline;
+  }
 

@@ -246,7 +246,7 @@ function runAnalysis() {
 function analyseEcartCB() {
     document.getElementById("info-bubble").innerHTML =`
   <ul>
-  <li>A venir</li>
+  <li>Ce script affiche les données bancaires qui n'ont pas été enregistrées dans Wat.erp</li>
   </ul>
   `;
       document.getElementById("scripts-container").innerHTML = `

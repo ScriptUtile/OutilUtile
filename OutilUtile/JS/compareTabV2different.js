@@ -5,6 +5,13 @@ function comparerDiff() {
     let resultat = comparerTableauxDiff(tableau1, tableau2);
     document.getElementById("resultat1").value = resultat[0].join("\n");
     document.getElementById("resultat2").value = resultat[1].join("\n");
+    
+    document.getElementById("countIn1").innerHTML = tableau1.length;
+    document.getElementById("countIn2").innerHTML = tableau2.length;
+    document.getElementById("countRes1").innerHTML = resultat[0].length;
+    document.getElementById("countRes2").innerHTML = resultat[1].length;
+
+
   }
   
   // function comparerTableauxDiff(tableau1, tableau2) {
@@ -56,14 +63,18 @@ function comparerDiff() {
     <div id="ctn">
       <label for="tableau1">Entrez les éléments des deux tableaux à comparer, un par ligne :</label>
       <textarea id="tableau1" rows="20" cols="30"></textarea>
+      <div id="countIn1" class="count"></div>
       <textarea id="tableau2" rows="20" cols="30"></textarea><br />
-        <button onclick="comparerDiff()">Comparer</button><br />
+      <div id="countIn2" class="count"></div>
+      <button onclick="comparerDiff()">Comparer</button><br />
         <br>
       <div id="cols">
         <label for="resultat1">Eléménts uniquement dans le tableau1 :</label>
       <textarea id="resultat1" rows="20" cols="30"></textarea>
-        <label for="resultat2">Eléménts uniquement dans le tableau2 :</label>
+      <div id="countRes1" class="count"></div>
+      <label for="resultat2">Eléménts uniquement dans le tableau2 :</label>
       <textarea id="resultat2" rows="20" cols="30"></textarea><br />
+      <div id="countRes2" class="count"></div>
       </div>
     </div>
     `;

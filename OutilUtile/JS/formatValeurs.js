@@ -48,19 +48,25 @@ function formatValeurJS() {
 </ul>
 `;
     document.getElementById("scripts-container").innerHTML = `
-    <h2>Formatage de valeurs : colonne > ligne</span></h2>
+    <h2>Formatage d'une liste de valeurs en ligne</span></h2>
     <div id="ctn">
     <div>
       <label for="inputValues">Entrez les valeurs :</label><br>
       <textarea id="inputValues" rows="20" cols="70" onchange="formatValues(); checkCopyAuto();"></textarea>
       <div id="countIn" class="count"></div>
     </div>
-    <label for="autoCB">Copie automatique du Résultat 1 dans le clipboard</label>
-    <input id="autoCB" type="checkbox" checked>
-    <button type="button" onclick="formatValues()">Convertir</button>
-    <button type="button" id="reset" onclick="formatValeurJS()">Reset</button><br><br>
+    <div>
+      <div class="float-left">
+        <input id="autoCB" type="checkbox" checked>
+        <label for="autoCB">Copie automatique du Résultat 1</label>
+      </div>
+      <div>
+        <button type="button" onclick="formatValues()">Convertir</button>
+        <button type="button" id="reset" onclick="formatValeurJS()">Reset</button><br><br>
+      </div>
+      <div id="count"></div>
+    </div>
 
-    <div id="count"></div>
     <div id="output"></div>
   </div>
     `;
