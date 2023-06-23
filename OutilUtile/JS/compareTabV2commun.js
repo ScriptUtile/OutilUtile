@@ -3,6 +3,10 @@ function comparerComm() {
     let tableau2 = document.getElementById("tableau2").value.split("\n").filter(ligne => ligne.trim() !== "");
     let resultat = comparerTableauxComm(tableau1, tableau2);
     document.getElementById("resultat").value = resultat.join("\n");
+
+    document.getElementById("countIn1").innerHTML = tableau1.length;
+    document.getElementById("countIn2").innerHTML = tableau2.length;
+    document.getElementById("countRes").innerHTML = resultat.length;
   }
   
   function comparerTableauxComm(tableau1, tableau2) {
@@ -32,11 +36,14 @@ function comparerComm() {
     <div id="ctn">
     <label for="tableau1">Entrez les éléments des deux tableaux à comparer, un par ligne :</label>
     <textarea id="tableau1" rows="20" cols="30"></textarea>
+    <div id="countIn1" class="count"></div>    
     <textarea id="tableau2" rows="20" cols="30"></textarea><br />
+    <div id="countIn2" class="count"></div>
     <div><button onclick="comparerComm()">Comparer</button></div>
     <br>
     <label for="resultat">Résultat :</label><br>
     <textarea id="resultat" rows="18" cols="64"></textarea>
+    <div id="countRes" class="count"></div>
     </div>
     `;
   }
