@@ -280,3 +280,29 @@ h1 {
     vertical-align: baseline;
   }
 
+  fieldset {
+    width: 500px;
+    border-width: 1px;
+    border-color: rgb(118, 118, 118);
+    text-align: left;
+  }
+  
+  fieldset legend {
+    font-size: 0.9em;
+    color: #999;
+  }
+
+fieldset input {
+  width: auto !important;
+  color: #ccc;
+}
+
+fieldset.inside {
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  margin-top: 10px;
+}
+
+fieldset.inside legend {
+  font-size: 0.8em;
+}
