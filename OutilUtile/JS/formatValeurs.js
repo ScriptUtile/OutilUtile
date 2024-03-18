@@ -6,6 +6,8 @@ function formatValues() {
   var formatModeByLot = document.getElementById("formatModeByLot").checked;
   var formatModeConcatAll = document.getElementById("formatModeConcatAll").checked;
   var tailleLot = document.getElementById("tailleLot").value.trim();
+  var formatTrim = document.getElementById("formatTrim").checked;
+  var formatAddQuotes = document.getElementById("formatAddQuotes").checked;
   var output = "";
 
 // console.log('formatModeByLot', formatModeByLot);
@@ -25,7 +27,12 @@ function formatValues() {
     var chunkLines = lines.slice(i, i + chunkSize);
     var chunkOutput = "";
     for (var j = 0; j < chunkLines.length; j++) {
-      chunkOutput += "'" + chunkLines[j].trim() + "'";
+      //chunkOutput += "'" + chunkLines[j].trim() + "'";
+      if(formatAddQuotes) chunkOutput += "'";
+      if(formatTrim) chunkOutput += chunkLines[j].trim();
+      else chunkOutput += chunkLines[j];
+      if(formatAddQuotes) chunkOutput += "'";
+
       if (j < chunkLines.length - 1) {
         chunkOutput += ", ";
       }
@@ -103,6 +110,14 @@ function formatValeurJS() {
           <div>
             <input id="autoCB" type="checkbox" checked>
             <label for="autoCB">Copie automatique du Résultat 1</label>
+          </div>
+          <div>
+            <input id="formatTrim" type="checkbox" checked>
+            <label for="formatTrim">Appliquer un trim sur les valeurs entrées</label>
+          </div>
+          <div>
+            <input id="formatAddQuotes" type="checkbox" checked>
+            <label for="formatAddQuotes">Afficher les valeurs de sorties entre quotes</label>
           </div>
           <div>
             <label for="tailleLot">Taille des lots</label>
