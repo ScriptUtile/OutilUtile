@@ -8,6 +8,7 @@ function formatValues() {
   var tailleLot = document.getElementById("tailleLot").value.trim();
   var formatTrim = document.getElementById("formatTrim").checked;
   var formatAddQuotes = document.getElementById("formatAddQuotes").checked;
+  var formatAddSpace = document.getElementById("formatAddSpace").checked;
   var output = "";
 
 // console.log('formatModeByLot', formatModeByLot);
@@ -34,7 +35,8 @@ function formatValues() {
       if(formatAddQuotes) chunkOutput += "'";
 
       if (j < chunkLines.length - 1) {
-        chunkOutput += ", ";
+        if (formatAddSpace) chunkOutput += ", ";
+        else chunkOutput += ",";
       }
     }
 
@@ -118,6 +120,10 @@ function formatValeurJS() {
           <div>
             <input id="formatAddQuotes" type="checkbox" checked>
             <label for="formatAddQuotes">Afficher les valeurs de sorties entre quotes</label>
+          </div>
+          <div>
+            <input id="formatAddSpace" type="checkbox" checked>
+            <label for="formatAddSpace">Ajouter un espace après les virgules</label>
           </div>
           <div>
             <label for="tailleLot">Taille des lots</label>
